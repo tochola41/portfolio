@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom Ochola | Accounting Systems & Websites in Kenya</title>
+<meta name="description" content="Tom Ochola builds accounting systems, M-Pesa-ready tools and business websites for small businesses in Kenya. BSc Accounting and Finance with IT.">
+<meta name="author" content="Tom Ochola">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tom Ochola | Accounting Systems & Websites">
+<meta property="og:description" content="Accounting systems and websites that make small businesses easier to run. Based in Kenya.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23fff' text-anchor='middle'%3ETO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&family=Fraunces:wght@500;700;800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tom Ochola","description":"Accounting systems and business websites for small businesses in Kenya.","telephone":"+254726630656","email":"ocholatom10@gmail.com","areaServed":"Kenya","founder":{"@type":"Person","name":"Tom Ochola","alumniOf":"BSc Accounting and Finance with IT"}}
+</script>
+<style>
+:root{
+  --bg-d:#0a0a0a; --bg-l:#ffffff; --bg-o:#f4f4f2; --card-d:#121212;
+  --fg-d:#ffffff; --fg-l:#111111; --mut-d:#a8a8a2; --mut-l:#5d5d58;
+  --line-d:#262626; --line-l:#e3e3df; --acc:#ffffff; --acc-fg:#000000; --acc-l:#000000; --acc-l-fg:#ffffff;
+  --fh:Syne,'Segoe UI',sans-serif; --fb:Manrope,'Segoe UI',system-ui,sans-serif; --fm:'JetBrains Mono',Consolas,monospace;
+}
+/* colour themes */
+/* black & white stay the base; each theme only blends in one accent colour */
+[data-theme="gold"]{--acc:#d4af37;--acc-fg:#111;--acc-l:#a67c00}
+[data-theme="blue"]{--acc:#4c8dff;--acc-fg:#fff;--acc-l:#1d4ed8}
+[data-theme="emerald"]{--acc:#3ecf8e;--acc-fg:#04130c;--acc-l:#0c7a4d}
+[data-theme="coral"]{--acc:#ff6b5b;--acc-fg:#1a0805;--acc-l:#d9382a}
+[data-theme="violet"]{--acc:#a78bfa;--acc-fg:#120a2a;--acc-l:#6d3fe0}
+/* font pairs */
+[data-font="serif"]{--fh:'Playfair Display',Georgia,serif;--fb:Inter,'Segoe UI',sans-serif}
+[data-font="grotesk"]{--fh:'Space Grotesk','Segoe UI',sans-serif;--fb:'DM Sans','Segoe UI',sans-serif}
+[data-font="soft"]{--fh:Fraunces,Georgia,serif;--fb:'Work Sans','Segoe UI',sans-serif}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--fb);background:var(--bg-l);color:var(--fg-l);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:8px 14px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+h1,h2,h3,.logo{font-family:var(--fh)}
+.mono{font-family:var(--fm);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.mono.muted::before{content:"";display:inline-block;width:26px;height:2px;background:var(--acc-l);vertical-align:middle;margin-right:10px}
+.dark .mono.muted::before{background:var(--acc)}
+h2::after{content:".";color:var(--acc-l)}
+.dark h2::after{color:var(--acc)}
+.logo i{color:var(--acc)}
+.card:hover{border-color:var(--acc-l)}
+.dark .card:hover{border-color:var(--acc)}
+.num,summary::after{color:var(--acc-l)}
+.stats b{border-left:2px solid var(--acc);padding-left:10px}
+.tags span:first-child{border-color:var(--acc);color:var(--acc)}
+
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg-d) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d);color:var(--fg-d)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:.02em}
+.logo i{font-style:normal;opacity:.5}
+.nav nav{display:flex;align-items:center;gap:26px}
+.nav nav a{text-decoration:none;font-size:.9rem;color:var(--mut-d);transition:color .2s}
+.nav nav a:hover{color:var(--fg-d)}
+.nav nav a.pill{color:var(--acc-fg);background:var(--acc);padding:8px 16px;border-radius:99px;font-weight:600}
+.burger{display:none;background:none;border:1px solid var(--line-d);color:var(--fg-d);border-radius:8px;padding:7px 11px;font-size:1.1rem;cursor:pointer}
+@media(max-width:820px){
+  .burger{display:block}
+  .nav nav{position:absolute;top:64px;left:0;right:0;background:var(--bg-d);flex-direction:column;align-items:flex-start;padding:18px 22px 24px;gap:16px;border-bottom:1px solid var(--line-d);display:none}
+  .nav nav.open{display:flex}
+}
+
+section{padding:92px 0}
+.dark{background:var(--bg-d);color:var(--fg-d)}
+.dark .muted{color:var(--mut-d)}
+.light{background:var(--bg-l);color:var(--fg-l)}
+.off{background:var(--bg-o);color:var(--fg-l)}
+.muted{color:var(--mut-l)}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.1;margin:10px 0 14px;font-weight:800}
+.sub{max-width:620px;margin-bottom:46px}
+
+/* hero */
+.hero{padding:100px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;border-radius:50%;border:1px solid var(--line-d);box-shadow:0 0 0 70px rgba(255,255,255,.015),0 0 0 140px rgba(255,255,255,.012);pointer-events:none}
+.hero-grid{display:grid;gap:44px;grid-template-columns:1fr;align-items:center;position:relative;z-index:1}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.35fr .65fr}}
+h1{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.03;font-weight:800;margin:18px 0 24px;letter-spacing:-.02em}
+h1 em{font-style:normal;-webkit-text-stroke:1.5px var(--acc);color:transparent}
+.hero p.lead{font-size:1.18rem;max-width:560px;color:var(--mut-d)}
+.cta{margin-top:34px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:99px;font-weight:700;text-decoration:none;border:1.5px solid var(--acc);background:var(--acc);color:var(--acc-fg);transition:transform .15s,background .2s,color .2s;font-family:inherit;font-size:.98rem;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--fg-d);border-color:var(--fg-d)}
+.btn.ghost:hover{background:var(--fg-d);color:var(--bg-d)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:70px;border-top:1px solid var(--line-d);position:relative;z-index:1}
+.stats div{padding:22px 18px 0 0}
+.stats b{font-family:var(--fh);font-size:1.4rem;display:block}
+.stats span{color:var(--mut-d);font-size:.88rem}
+
+/* photo */
+.photo{width:min(330px,72vw);aspect-ratio:1;border-radius:50%;background:var(--card-d) center/cover no-repeat;border:1px solid var(--line-d);box-shadow:0 0 0 10px rgba(255,255,255,.04);display:grid;place-items:center;font-family:var(--fh);font-size:5rem;font-weight:800;color:var(--mut-d);justify-self:center}
+.photo.has{font-size:0}
+.photo.sq{border-radius:22px;aspect-ratio:4/5;width:min(300px,100%);box-shadow:none;border-color:var(--line-l);background-color:#dcdcd8;color:#999;margin-bottom:26px;justify-self:start}
+
+/* cards */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{border:1px solid var(--line-l);border-radius:18px;padding:30px;background:var(--bg-l);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.num{font-family:var(--fm);font-size:.8rem;color:#8a8a85;margin-bottom:26px;display:block}
+.card h3{font-size:1.35rem;margin-bottom:10px}
+.card p,.card li{color:var(--mut-l);font-size:.97rem}
+.card ul{margin:14px 0 0 18px}
+.card li{margin-bottom:4px}
+.dark .card{background:var(--card-d);border-color:var(--line-d)}
+.dark .card:hover{box-shadow:0 18px 40px rgba(255,255,255,.04)}
+.dark .card p,.dark .card li{color:var(--mut-d)}
+
+/* work mock-ups */
+.proj{padding:0;overflow:hidden}
+.mock{height:170px;background:linear-gradient(160deg,#1c1c1c,#0d0d0d);border-bottom:1px solid var(--line-d);padding:20px}
+.win{height:100%;border:1px solid #333;border-radius:10px;background:#0a0a0a;padding:10px 12px;overflow:hidden}
+.dots{display:flex;gap:5px;margin-bottom:10px}
+.dots i{width:7px;height:7px;border-radius:50%;background:#444}
+.bars{display:flex;align-items:flex-end;gap:7px;height:62px;margin-top:6px}
+.bars i{flex:1;background:var(--acc);opacity:.85;border-radius:3px 3px 0 0}
+.bars i:nth-child(odd){opacity:.35}
+.ln{height:7px;border-radius:4px;background:#2c2c2c;margin:8px 0}
+.ln.w{background:var(--acc);opacity:.8}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:6px}
+.cols i{height:44px;border-radius:6px;background:#1f1f1f;border:1px solid #2c2c2c}
+.cols i:first-child{background:var(--acc);opacity:.9}
+.proj .body{padding:26px}
+.proj h3{font-size:1.25rem;margin-bottom:8px}
+.row{margin-top:10px;font-size:.92rem;color:var(--mut-d)}
+.row b{color:var(--fg-d)}
+.tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+.tags span{border:1px solid #333;border-radius:99px;padding:3px 11px;font-size:.76rem;color:#c9c9c4;font-family:var(--fm)}
+
+/* pricing */
+.price{font-family:var(--fh);font-size:2rem;font-weight:800;margin:6px 0 2px}
+.price small{font-size:.85rem;font-weight:500;color:#8a8a85;font-family:var(--fb)}
+.feat{background:var(--bg-d);color:var(--fg-d);border-color:var(--bg-d)}
+.feat h3,.feat .price{color:var(--fg-d)}
+.feat li,.feat p{color:var(--mut-d)!important}
+.badge{display:inline-block;background:var(--acc);color:var(--acc-fg);border-radius:99px;font-size:.7rem;font-weight:700;padding:3px 10px;margin-bottom:10px;font-family:var(--fm);letter-spacing:.08em}
+.note{margin-top:26px;font-size:.95rem}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border-top:1px solid var(--line-d)}
+.step{padding:28px 24px 10px 0}
+.step span{font-family:var(--fh);font-size:3rem;font-weight:800;-webkit-text-stroke:1px var(--acc);color:transparent;display:block;line-height:1}
+.step h3{margin:14px 0 8px;font-size:1.2rem}
+.step p{color:var(--mut-d);font-size:.95rem}
+
+/* about */
+.about{display:grid;gap:50px;grid-template-columns:1fr;align-items:start}
+@media(min-width:860px){.about{grid-template-columns:1.3fr 1fr}}
+.skills span{display:inline-block;border:1px solid var(--line-l);background:var(--bg-l);padding:7px 14px;border-radius:99px;margin:0 8px 10px 0;font-size:.88rem}
+.edu{margin-top:26px;border-left:3px solid var(--acc-l);padding:4px 0 4px 18px}
+.edu b{font-family:var(--fh);font-size:1.1rem;display:block}
+
+/* faq */
+details{border-top:1px solid var(--line-l);padding:20px 0}
+details:last-of-type{border-bottom:1px solid var(--line-l)}
+summary{cursor:pointer;font-family:var(--fh);font-weight:700;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--mut-l);max-width:720px}
+
+/* contact */
+.contact-grid{display:grid;gap:44px;grid-template-columns:1fr}
+@media(min-width:860px){.contact-grid{grid-template-columns:1fr 1fr}}
+.links a{display:block;font-size:1.15rem;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-d);padding:16px 0;transition:padding .2s}
+.links a:hover{padding-left:8px}
+.links a span{display:block;font-size:.78rem;color:#8a8a85;font-weight:400}
+form{display:grid;gap:14px}
+label{font-size:.82rem;color:var(--mut-d)}
+input,select,textarea{width:100%;background:var(--card-d);border:1px solid #333;color:#fff;border-radius:12px;padding:13px 14px;font:inherit;margin-top:6px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+footer{background:#000;color:#8a8a85;padding:32px 0;font-size:.88rem;border-top:1px solid var(--line-d)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.wa{position:fixed;right:18px;bottom:18px;background:var(--acc);color:var(--acc-fg);font-weight:700;text-decoration:none;padding:13px 20px;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:60}
+
+/* customize panel (owner only) */
+#cz-btn{position:fixed;left:18px;bottom:18px;z-index:70;background:#fff;color:#000;border:1.5px solid #000;border-radius:99px;padding:12px 18px;font-weight:700;font-family:var(--fb);cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.35);display:none}
+#cz{position:fixed;left:18px;bottom:72px;width:min(330px,calc(100vw - 36px));max-height:78vh;overflow:auto;background:#fff;color:#111;border:1.5px solid #000;border-radius:18px;padding:20px;z-index:70;box-shadow:0 18px 50px rgba(0,0,0,.45);display:none;font-family:'Segoe UI',system-ui,sans-serif}
+#cz.open{display:block}
+#cz h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#777;margin:16px 0 8px}
+#cz h4:first-child{margin-top:0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{border:1.5px solid #ddd;border-radius:10px;padding:9px 10px;font-size:.85rem;background:#fff;cursor:pointer;text-align:left;color:#111;font-family:inherit}
+.opt.on{border-color:#000;background:#000;color:#fff}
+.sw{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px;vertical-align:-1px;border:1px solid #888}
+#cz .small{font-size:.8rem;color:#666;margin-top:8px;line-height:1.4}
+#cz button.act{width:100%;margin-top:8px;padding:10px;border-radius:10px;border:1.5px solid #000;background:#000;color:#fff;font-weight:600;cursor:pointer;font-family:inherit}
+#cz button.act.alt{background:#fff;color:#000}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top">TOM<i>/</i>OCHOLA</a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('menu');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰</button>
+  <nav id="menu">
+    <a href="#services">Services</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
+    <a class="pill" href="#contact">Get a quote</a>
+  </nav>
+</div></header>
+
+<main id="main">
+
+<section class="dark hero" id="top"><div class="wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="mono muted">Accountant · Developer · Kenya</div>
+      <h1>Accounting systems &amp; websites that <em>work</em> for your business.</h1>
+      <p class="lead">I'm an accountant who builds software. So the tools I make get the numbers right, understand M-Pesa and stock, and your website actually brings in customers.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Start a project →</a>
+        <a class="btn ghost" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="photo" data-photo role="img" aria-label="Photo of Tom Ochola">TO</div>
+  </div>
+  <div class="stats">
+    <div><b>M-Pesa ready</b><span>payments built into the tools</span></div>
+    <div><b>KES + USD</b><span>multi-currency books</span></div>
+    <div><b>English / Kiswahili</b><span>screens and reports</span></div>
+    <div><b>Training included</b><span>you can run it without me</span></div>
+  </div>
+</div></section>
+
+<section class="light" id="services"><div class="wrap">
+  <div class="mono muted rv">What I do</div>
+  <h2 class="rv">Three services. Done properly.</h2>
+  <p class="sub muted rv">Systems that keep your money organised, websites that sell for you, and bookkeeping you can trust.</p>
+  <div class="grid">
+    <div class="card rv"><span class="num">01</span><h3>Accounting systems</h3>
+      <p>Custom bookkeeping and management tools built around how your business actually works.</p>
+      <ul><li>Cash, bank and M-Pesa books</li><li>Sales, stock and expense tracking</li><li>Profit &amp; loss, balance sheet, cash flow</li><li>Budgets, loans and tax estimates</li></ul></div>
+    <div class="card rv"><span class="num">02</span><h3>Business websites</h3>
+      <p>Fast, mobile-first websites with WhatsApp and M-Pesa ordering, so customers can reach and pay you.</p>
+      <ul><li>Shops, cafés, schools, service firms</li><li>Online menu or catalogue with orders</li><li>Admin panel to update it yourself</li><li>Domain, hosting and maintenance</li></ul></div>
+    <div class="card rv"><span class="num">03</span><h3>Bookkeeping &amp; set-up</h3>
+      <p>I set up your books, train you to use them, and can keep them for you every month.</p>
+      <ul><li>Monthly management accounts</li><li>Clean-up of messy records</li><li>Staff training on your system</li><li>Ongoing support and updates</li></ul></div>
+  </div>
+</div></section>
+
+<section class="dark" id="work"><div class="wrap">
+  <div class="mono muted rv">Selected work</div>
+  <h2 class="rv">Things I've designed and built.</h2>
+  <p class="sub muted rv">Live demos and screenshots available on request.</p>
+  <div class="grid">
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:60%"></i><i style="height:100%"></i></div></div></div>
+      <div class="body"><h3>Tabby T: personal &amp; business money app</h3>
+      <p>A finance app for Kenyans with a free Personal plan and a Business plan on monthly subscription.</p>
+      <div class="row"><b>Problem:</b> people and small shops track money in notebooks and lose track of M-Pesa.</div>
+      <div class="row"><b>Solution:</b> entries by form or app, automatic M-Pesa SMS capture, full financial statements, and a subscription manager that locks unpaid accounts.</div>
+      <div class="tags"><span>Google Sheets</span><span>Apps Script</span><span>PWA</span><span>M-Pesa</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="cols"><i></i><i></i><i></i></div><div class="ln w" style="width:70%"></div><div class="ln" style="width:90%"></div><div class="ln" style="width:55%"></div></div></div>
+      <div class="body"><h3>Biashara: shop &amp; stock system</h3>
+      <p>A business sheet for a small trader: stock, sales, daily and monthly reports.</p>
+      <div class="row"><b>Problem:</b> no idea of real profit or what is left in stock.</div>
+      <div class="row"><b>Solution:</b> each M-Pesa payment becomes a sales line automatically, with P&amp;L, a cash book by method and a balance sheet with a built-in check.</div>
+      <div class="tags"><span>Stock</span><span>P&amp;L</span><span>Balance sheet</span><span>EN / SW</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="ln w" style="width:40%"></div><div class="cols"><i></i><i></i><i></i></div><div class="ln" style="width:80%"></div><div class="ln" style="width:60%"></div></div></div>
+      <div class="body"><h3>Café ordering site with admin panel</h3>
+      <p>A website where customers browse the menu and order, and staff manage everything from an admin page.</p>
+      <div class="row"><b>Problem:</b> orders taken by phone and chat are easy to miss.</div>
+      <div class="row"><b>Solution:</b> online menu, order flow and a dashboard for the owner.</div>
+      <div class="tags"><span>Web app</span><span>Admin dashboard</span><span>Python</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="ln w" style="width:35%"></div><div class="ln"></div><div class="ln"></div><div class="ln" style="width:75%"></div><div class="ln w" style="width:50%"></div></div></div>
+      <div class="body"><h3>My Account: full personal ledger</h3>
+      <p>An Excel and Google workbook that runs a person's whole financial life.</p>
+      <div class="row"><b>Solution:</b> bank, cash and M-Pesa books, multi-currency (KES/USD), percentage budget, loans and debts, investments, net worth, reconciliation and KRA tax bands.</div>
+      <div class="tags"><span>Excel</span><span>VBA</span><span>Multi-currency</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="cols"><i></i><i></i><i></i></div><div class="cols"><i></i><i></i><i></i></div></div></div>
+      <div class="body"><h3>Restaurant management workbooks</h3>
+      <p>Multi-branch management workbooks for restaurant operations.</p>
+      <div class="row"><b>Solution:</b> one consistent structure per branch, so the owner can compare performance across locations.</div>
+      <div class="tags"><span>Excel</span><span>Multi-branch</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="ln"></div><div class="ln"></div><div class="ln" style="width:60%"></div><div class="ln w" style="width:30%;margin-top:22px;height:10px"></div></div></div>
+      <div class="body"><h3>PDF Signer</h3>
+      <p>A free, private tool for signing PDFs: draw, type or upload a signature, place it and download.</p>
+      <div class="row"><b>Why it matters:</b> nothing is uploaded, so documents never leave the user's computer.</div>
+      <div class="tags"><span>JavaScript</span><span>Privacy-first</span></div></div></div>
+
+  </div>
+</div></section>
+
+<section class="light" id="pricing"><div class="wrap">
+  <div class="mono muted rv">Pricing</div>
+  <h2 class="rv">Fair, clear pricing.</h2>
+  <p class="sub muted rv">Starting prices in Kenya shillings. The final quote depends on what you need, and you always know the cost before I start.</p>
+  <div class="grid">
+    <div class="card rv"><h3>Starter Website</h3><div class="price">KES 15,000<small> from</small></div>
+      <ul><li>Up to 5 pages, mobile-friendly</li><li>WhatsApp and contact buttons</li><li>Basic Google visibility set-up</li><li>1 round of changes</li></ul></div>
+    <div class="card feat rv"><span class="badge">MOST POPULAR</span><h3>Business Website</h3><div class="price">KES 35,000<small> from</small></div>
+      <ul><li>Menu or catalogue with online orders</li><li>M-Pesa payment details at checkout</li><li>Admin panel to update it yourself</li><li>Training included</li></ul></div>
+    <div class="card rv"><h3>Accounting System</h3><div class="price">KES 25,000<small> from</small></div>
+      <ul><li>Books built around your business</li><li>Sales, stock, expenses, M-Pesa</li><li>P&amp;L, balance sheet, cash flow</li><li>Staff training and handover</li></ul></div>
+    <div class="card rv"><h3>Monthly Bookkeeping</h3><div class="price">KES 6,000<small> / month from</small></div>
+      <ul><li>Records kept up to date</li><li>Monthly management accounts</li><li>Records clean-up if needed</li><li>Support on WhatsApp</li></ul></div>
+    <div class="card rv"><h3>Care Plan</h3><div class="price">KES 2,000<small> / month from</small></div>
+      <ul><li>Hosting and domain handled</li><li>Updates and small changes</li><li>Backups and fixes</li><li>Priority replies</li></ul></div>
+  </div>
+  <p class="note muted rv">Work starts with a 50% deposit and the balance on delivery. Need something different? <a href="#contact"><b>Ask for a custom quote</b></a>.</p>
+</div></section>
+
+<section class="dark" id="process"><div class="wrap">
+  <div class="mono muted rv">Process</div>
+  <h2 class="rv">How we work together.</h2>
+  <p class="sub muted rv">Simple, clear and no surprises.</p>
+  <div class="steps">
+    <div class="step rv"><span>01</span><h3>Talk</h3><p>Tell me how your business runs. I ask about your sales, expenses and the reports you need.</p></div>
+    <div class="step rv"><span>02</span><h3>Quote</h3><p>You get a clear scope and price. I start after a 50% deposit.</p></div>
+    <div class="step rv"><span>03</span><h3>Build</h3><p>I build it and show you progress along the way, so you can correct me early.</p></div>
+    <div class="step rv"><span>04</span><h3>Train &amp; support</h3><p>I train you and your staff, then stay available for updates and maintenance.</p></div>
+  </div>
+</div></section>
+
+<section class="off" id="about"><div class="wrap about">
+  <div>
+    <div class="photo sq" data-photo role="img" aria-label="Photo of Tom Ochola">TO</div>
+    <div class="mono muted rv">About</div>
+    <h2 class="rv">An accountant who builds.</h2>
+    <p class="muted rv" style="margin-bottom:14px">I'm Tom Ochola, based in Kenya. My degree combined accounting with IT, and I went on to teach myself to build the tools I kept wishing existed: systems, apps and websites.</p>
+    <p class="muted rv">That mix means I don't just make something that looks good. I make something whose numbers are right, that fits how Kenyan businesses really get paid, and that you can run without me.</p>
+    <div class="edu rv"><b>BSc Accounting &amp; Finance with IT</b><span class="muted">Bachelor's degree</span></div>
+  </div>
+  <div class="skills rv">
+    <h3 style="margin-bottom:16px;font-size:1.2rem">Tools &amp; skills</h3>
+    <span>Financial accounting</span><span>Bookkeeping</span><span>Management accounts</span><span>Excel &amp; VBA</span><span>Google Sheets &amp; Apps Script</span><span>Web development</span><span>Python</span><span>M-Pesa workflows</span><span>KRA tax basics</span><span>Video editing</span>
+  </div>
+</div></section>
+
+<section class="light" id="faq"><div class="wrap">
+  <div class="mono muted rv">FAQ</div>
+  <h2 class="rv">Questions people ask.</h2>
+  <div style="max-width:820px;margin-top:30px">
+    <details class="rv"><summary>How long does a project take?</summary><p>A starter website usually takes about a week. Business websites and accounting systems take two to four weeks, depending on how much you need. I give you a date in the quote.</p></details>
+    <details class="rv"><summary>Can customers pay through M-Pesa?</summary><p>Yes. I show your till, paybill or phone number at checkout, and for accounting systems I can capture M-Pesa payment messages so sales are recorded automatically.</p></details>
+    <details class="rv"><summary>Will I be able to update things myself?</summary><p>Yes. Business websites come with an admin panel, and I train you and your staff. If you prefer, the Care Plan lets me handle updates for you.</p></details>
+    <details class="rv"><summary>Do I need to pay everything upfront?</summary><p>No. You pay 50% to start and the balance when the work is delivered and you're happy with it.</p></details>
+    <details class="rv"><summary>Is my business data safe?</summary><p>Your data stays in accounts you own, such as your own Google or Excel files. I don't keep or sell your information.</p></details>
+    <details class="rv"><summary>Do you work with clients outside Nairobi?</summary><p>Yes. I work with clients across Kenya and beyond, over WhatsApp, calls and screen sharing.</p></details>
+  </div>
+</div></section>
+
+<section class="dark" id="contact"><div class="wrap">
+  <div class="mono muted rv">Contact</div>
+  <h2 class="rv">Let's build something for your business.</h2>
+  <p class="sub muted rv">Tell me what you need. I reply quickly, usually the same day.</p>
+  <div class="contact-grid">
+    <div class="links rv">
+      <a href="https://wa.me/254726630656" target="_blank" rel="noopener"><span>WhatsApp (fastest)</span>+254 726 630 656</a>
+      <a href="mailto:ocholatom10@gmail.com"><span>Email</span>ocholatom10@gmail.com</a>
+      <a href="tel:+254726630656"><span>Call</span>+254 726 630 656</a>
+    </div>
+    <form class="rv" id="qf">
+      <label>Your name<input name="n" required autocomplete="name"></label>
+      <label>What do you need?
+        <select name="s"><option>Accounting system</option><option>Business website</option><option>Starter website</option><option>Monthly bookkeeping</option><option>Something else</option></select></label>
+      <label>Tell me a little about your business<textarea name="m" required></textarea></label>
+      <button class="btn" type="submit">Send via WhatsApp →</button>
+    </form>
+  </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap"><span>© <script>document.write(new Date().getFullYear())</script> Tom Ochola · Accounting systems &amp; websites · Kenya</span><a href="#top" style="color:#fff">Back to top ↑</a></div></footer>
+
+<a class="wa" href="https://wa.me/254726630656?text=Hi%20Tom%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
+
+<!-- Owner customize panel: only visible when opened from your own computer (file) or with ?edit -->
+<button id="cz-btn" type="button">✎ Customize</button>
+<div id="cz" role="dialog" aria-label="Customize">
+  <h4>Profile photo</h4>
+  <input type="file" id="cz-file" accept="image/*" style="display:none">
+  <button class="act" type="button" id="cz-up">Upload a photo</button>
+  <button class="act alt" type="button" id="cz-dl" style="display:none">Download as profile.jpg</button>
+  <button class="act alt" type="button" id="cz-rm" style="display:none">Remove preview photo</button>
+  <p class="small">To keep the photo when the site goes online, click Download, then save it as <b>profile.jpg</b> inside the Portfolio folder.</p>
+  <h4>Colour theme</h4>
+  <div class="opts" id="cz-themes">
+    <button class="opt" data-v="mono"><span class="sw" style="background:linear-gradient(90deg,#000 50%,#fff 50%)"></span>Pure B&amp;W</button>
+    <button class="opt" data-v="gold"><span class="sw" style="background:#d4af37"></span>B&amp;W + Gold</button>
+    <button class="opt" data-v="blue"><span class="sw" style="background:#4c8dff"></span>B&amp;W + Blue</button>
+    <button class="opt" data-v="emerald"><span class="sw" style="background:#3ecf8e"></span>B&amp;W + Green</button>
+    <button class="opt" data-v="coral"><span class="sw" style="background:#ff6b5b"></span>B&amp;W + Coral</button>
+    <button class="opt" data-v="violet"><span class="sw" style="background:#a78bfa"></span>B&amp;W + Violet</button>
+  </div>
+  <h4>Font style</h4>
+  <div class="opts" id="cz-fonts">
+    <button class="opt" data-v="syne">Syne + Manrope<br><small>Bold, modern</small></button>
+    <button class="opt" data-v="serif">Playfair + Inter<br><small>Classic, editorial</small></button>
+    <button class="opt" data-v="grotesk">Space Grotesk + DM Sans<br><small>Tech, clean</small></button>
+    <button class="opt" data-v="soft">Fraunces + Work Sans<br><small>Warm, friendly</small></button>
+  </div>
+  <p class="small">Your choices are saved on this computer. Tell Claude which theme and font you like best and it will lock them in for everyone who visits.</p>
+</div>
+
+<script>
+// ---- defaults (lock your final choice here) ----
+var DEFAULTS={theme:'gold',font:'syne'};
+var OWNER=(location.protocol==='file:')||/[?&]edit/.test(location.search);
+var root=document.documentElement;
+function store(k,v){try{if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+
+// theme + font
+function applyTheme(t){if(t==='mono')root.removeAttribute('data-theme');else root.setAttribute('data-theme',t);mark('cz-themes',t)}
+function applyFont(f){if(f==='syne')root.removeAttribute('data-font');else root.setAttribute('data-font',f);mark('cz-fonts',f)}
+function mark(id,v){document.querySelectorAll('#'+id+' .opt').forEach(function(b){b.classList.toggle('on',b.dataset.v===v)})}
+var theme=(OWNER&&load('pf.theme'))||DEFAULTS.theme, font=(OWNER&&load('pf.font'))||DEFAULTS.font;
+applyTheme(theme);applyFont(font);
+
+// photo
+function setPhoto(src){
+  document.querySelectorAll('[data-photo]').forEach(function(el){
+    if(src){el.style.backgroundImage='url("'+src+'")';el.classList.add('has')}
+    else{el.style.backgroundImage='';el.classList.remove('has')}
+  });
+  var has=!!src;
+  var dl=document.getElementById('cz-dl'),rm=document.getElementById('cz-rm');
+  dl.style.display=(has&&dl.dataset.canDl==='1')?'block':'none';
+  rm.style.display=(OWNER&&load('pf.photo'))?'block':'none';
+}
+var saved=OWNER?load('pf.photo'):null;
+if(saved){document.getElementById('cz-dl').dataset.canDl='1';setPhoto(saved)}
+else{var im=new Image();im.onload=function(){setPhoto('profile.jpg')};im.onerror=function(){setPhoto(null)};im.src='profile.jpg'}
+
+// owner panel
+if(OWNER){
+  var btn=document.getElementById('cz-btn'),panel=document.getElementById('cz');
+  btn.style.display='block';
+  btn.onclick=function(){panel.classList.toggle('open')};
+  document.getElementById('cz-themes').onclick=function(e){var b=e.target.closest('.opt');if(!b)return;applyTheme(b.dataset.v);store('pf.theme',b.dataset.v)};
+  document.getElementById('cz-fonts').onclick=function(e){var b=e.target.closest('.opt');if(!b)return;applyFont(b.dataset.v);store('pf.font',b.dataset.v)};
+  var file=document.getElementById('cz-file');
+  document.getElementById('cz-up').onclick=function(){file.click()};
+  file.onchange=function(){
+    var f=file.files[0];if(!f)return;
+    var r=new FileReader();
+    r.onload=function(){
+      var img=new Image();
+      img.onload=function(){
+        var S=720,c=document.createElement('canvas');c.width=c.height=S;
+        var m=Math.min(img.width,img.height),sx=(img.width-m)/2,sy=(img.height-m)/3; // bias toward the top (faces)
+        c.getContext('2d').drawImage(img,sx,Math.max(0,sy),m,m,0,0,S,S);
+        var url=c.toDataURL('image/jpeg',.88);
+        store('pf.photo',url);
+        document.getElementById('cz-dl').dataset.canDl='1';
+        setPhoto(url);
+      };
+      img.src=r.result;
+    };
+    r.readAsDataURL(f);
+  };
+  document.getElementById('cz-dl').onclick=function(){
+    var a=document.createElement('a');a.href=load('pf.photo');a.download='profile.jpg';document.body.appendChild(a);a.click();a.remove();
+  };
+  document.getElementById('cz-rm').onclick=function(){store('pf.photo',null);document.getElementById('cz-dl').dataset.canDl='';location.reload()};
+}
+
+// scroll reveal
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open')})});
+document.getElementById('qf').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  var f=ev.target;
+  var t='Hi Tom, my name is '+f.n.value+'. I need: '+f.s.value+'.\n\n'+f.m.value;
+  window.open('https://wa.me/254726630656?text='+encodeURIComponent(t),'_blank');
+});
+</script>
+</body>
+</html>
