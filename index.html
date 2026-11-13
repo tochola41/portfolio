@@ -160,6 +160,7 @@ h1 em{font-style:normal;-webkit-text-stroke:1.5px var(--acc);color:transparent}
 .skills span{display:inline-block;border:1px solid var(--line-l);background:var(--bg-l);padding:7px 14px;border-radius:99px;margin:0 8px 10px 0;font-size:.88rem}
 .edu{margin-top:26px;border-left:3px solid var(--acc-l);padding:4px 0 4px 18px}
 .edu b{font-family:var(--fh);font-size:1.1rem;display:block}
+.edu+.edu{margin-top:16px}
 
 /* faq */
 details{border-top:1px solid var(--line-l);padding:20px 0}
@@ -199,12 +200,62 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 #cz button.act{width:100%;margin-top:8px;padding:10px;border-radius:10px;border:1.5px solid #000;background:#000;color:#fff;font-weight:600;cursor:pointer;font-family:inherit}
 #cz button.act.alt{background:#fff;color:#000}
 
+.btn.demo{margin-top:22px;padding:10px 22px;font-size:.88rem}
+/* motion */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.35;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E")}
+.tag-live{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-d);border-radius:99px;padding:7px 16px;font-family:var(--fm);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut-d)}
+.tag-live i{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 1.8s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 65%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+.nav nav a.active:not(.pill){color:var(--acc)}
+.num{font-family:var(--fh);font-size:3.2rem;font-weight:800;line-height:1;color:color-mix(in srgb,var(--acc-l) 24%,transparent);margin-bottom:18px}
+.nums{display:flex;gap:34px;flex-wrap:wrap;margin-top:30px;padding-top:24px;border-top:1px solid var(--line-l)}
+.nums b{font-family:var(--fh);font-size:2.3rem;color:var(--acc-l);display:block;line-height:1}
+.nums span{font-size:.85rem;color:var(--mut-l)}
+.meter{margin-bottom:16px}
+.mt{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:7px}
+.mt em{font-style:normal;color:var(--acc-l);font-family:var(--fm);font-size:.8rem}
+.mb{height:5px;background:var(--line-l);border-radius:99px;overflow:hidden}
+.mb i{display:block;height:100%;background:var(--acc-l);border-radius:99px;transform:scaleX(0);transform-origin:left;transition:transform 1.3s cubic-bezier(.2,.8,.2,1) .2s}
+.rv.in .mb i{transform:scaleX(var(--w))}
+.ok{display:none;border:1px solid var(--acc);color:var(--acc);border-radius:12px;padding:12px 14px;font-size:.9rem}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--acc);z-index:80}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.22;background:var(--acc);pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.blob.b1{width:340px;height:340px;left:-80px;top:40px}
+.blob.b2{width:260px;height:260px;right:12%;bottom:-60px;animation-duration:18s;animation-delay:-6s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,-40px) scale(1.2)}}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes blink{50%{opacity:0}}
+@keyframes slide{to{transform:translateX(-50%)}}
+.hero-grid>div:first-child>*{animation:up .8s both}
+.hero-grid>div:first-child>*:nth-child(2){animation-delay:.12s}
+.hero-grid>div:first-child>*:nth-child(3){animation-delay:.24s}
+.hero-grid>div:first-child>*:nth-child(4){animation-delay:.36s}
+.hero-grid>div:first-child>*:nth-child(5){animation-delay:.48s}
+.hero .photo{animation:float 6s ease-in-out infinite}
+.typed{font-family:var(--fh);font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:700;color:var(--fg-d);margin-bottom:16px;min-height:1.4em}
+.typed b{color:var(--acc);font-weight:700}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--acc);margin-left:3px;vertical-align:-3px;animation:blink 1s step-end infinite}
+.marquee{background:var(--bg-d);color:var(--fg-d);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);overflow:hidden;padding:18px 0}
+.track{display:flex;width:max-content;animation:slide 32s linear infinite}
+.track span{font-family:var(--fh);font-weight:700;font-size:1.15rem;white-space:nowrap;padding:0 26px;color:var(--mut-d)}
+.track span::after{content:"✦";color:var(--acc);margin-left:52px}
+.marquee:hover .track{animation-play-state:paused}
+.card{position:relative}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--acc) 16%,transparent),transparent 70%)}
+.card:hover::after{opacity:1}
+.bars i{transform-origin:bottom;transform:scaleY(.15);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in .bars i{transform:scaleY(1)}
+.bars i:nth-child(2){transition-delay:.08s}.bars i:nth-child(3){transition-delay:.16s}.bars i:nth-child(4){transition-delay:.24s}.bars i:nth-child(5){transition-delay:.32s}.bars i:nth-child(6){transition-delay:.4s}
+.rv:nth-child(2){transition-delay:.1s}.rv:nth-child(3){transition-delay:.2s}.rv:nth-child(4){transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){.blob,.hero .photo,.track{animation:none!important}}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
 .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<div id="bar"></div>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="nav"><div class="wrap">
@@ -218,15 +269,17 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
 <main id="main">
 
-<section class="dark hero" id="top"><div class="wrap">
+<section class="dark hero" id="top"><i class="blob b1"></i><i class="blob b2"></i><div class="wrap">
   <div class="hero-grid">
     <div>
-      <div class="mono muted">Accountant · Developer · Kenya</div>
+      <div class="tag-live"><i></i>Available for new projects · Kenya</div>
       <h1>Accounting systems &amp; websites that <em>work</em> for your business.</h1>
+      <div class="typed">I'm <b id="ty"></b><span class="caret"></span></div>
       <p class="lead">I'm an accountant who builds software. So the tools I make get the numbers right, understand M-Pesa and stock, and your website actually brings in customers.</p>
       <div class="cta">
         <a class="btn" href="#contact">Start a project →</a>
         <a class="btn ghost" href="#work">See my work</a>
+        <a class="btn ghost" href="cv.html">View my CV</a>
       </div>
     </div>
     <div class="photo" data-photo role="img" aria-label="Photo of Tom Ochola">TO</div>
@@ -238,6 +291,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div><b>Training included</b><span>you can run it without me</span></div>
   </div>
 </div></section>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Accounting systems</span><span>Business websites</span><span>M-Pesa workflows</span><span>Bookkeeping</span><span>Stock &amp; sales tracking</span><span>Financial statements</span><span>Staff training</span><span>Excel &amp; Google Sheets</span>
+  <span>Accounting systems</span><span>Business websites</span><span>M-Pesa workflows</span><span>Bookkeeping</span><span>Stock &amp; sales tracking</span><span>Financial statements</span><span>Staff training</span><span>Excel &amp; Google Sheets</span>
+</div></div>
 
 <section class="light" id="services"><div class="wrap">
   <div class="mono muted rv">What I do</div>
@@ -278,10 +336,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
     <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="ln w" style="width:40%"></div><div class="cols"><i></i><i></i><i></i></div><div class="ln" style="width:80%"></div><div class="ln" style="width:60%"></div></div></div>
       <div class="body"><h3>Café ordering site with admin panel</h3>
-      <p>A website where customers browse the menu and order, and staff manage everything from an admin page.</p>
-      <div class="row"><b>Problem:</b> orders taken by phone and chat are easy to miss.</div>
-      <div class="row"><b>Solution:</b> online menu, order flow and a dashboard for the owner.</div>
-      <div class="tags"><span>Web app</span><span>Admin dashboard</span><span>Python</span></div></div></div>
+      <p>A complete ordering website and owner system for a café, built to be sold to other restaurants.</p>
+      <div class="row"><b>Problem:</b> orders taken by phone and chat are easy to miss, and stock is guesswork.</div>
+      <div class="row"><b>Solution:</b> online menu and checkout with M-Pesa till confirmation, order tracking, promo codes and meal deals, inventory that deducts stock from recipes, expenses, catering quotes, and live rider tracking, all run from an owner admin panel.</div>
+      <div class="tags"><span>Web app</span><span>Admin dashboard</span><span>Python</span><span>M-Pesa</span></div></div></div>
 
     <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="ln w" style="width:35%"></div><div class="ln"></div><div class="ln"></div><div class="ln" style="width:75%"></div><div class="ln w" style="width:50%"></div></div></div>
       <div class="body"><h3>My Account: full personal ledger</h3>
@@ -291,15 +349,29 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
     <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="cols"><i></i><i></i><i></i></div><div class="cols"><i></i><i></i><i></i></div></div></div>
       <div class="body"><h3>Restaurant management workbooks</h3>
-      <p>Multi-branch management workbooks for restaurant operations.</p>
-      <div class="row"><b>Solution:</b> one consistent structure per branch, so the owner can compare performance across locations.</div>
-      <div class="tags"><span>Excel</span><span>Multi-branch</span></div></div></div>
+      <p>Simple money-in, money-out books for a restaurant and an electronics shop.</p>
+      <div class="row"><b>Problem:</b> staff record sales and expenses in different ways, so the owner can't see the real picture.</div>
+      <div class="row"><b>Solution:</b> staff fill a short form on their phones, and the sheet files each entry, tracks cash, M-Pesa and bank, and builds the summary automatically.</div>
+      <div class="tags"><span>Google Forms</span><span>Google Sheets</span><span>Apps Script</span></div></div></div>
 
     <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="ln"></div><div class="ln"></div><div class="ln" style="width:60%"></div><div class="ln w" style="width:30%;margin-top:22px;height:10px"></div></div></div>
       <div class="body"><h3>PDF Signer</h3>
       <p>A free, private tool for signing PDFs: draw, type or upload a signature, place it and download.</p>
       <div class="row"><b>Why it matters:</b> nothing is uploaded, so documents never leave the user's computer.</div>
       <div class="tags"><span>JavaScript</span><span>Privacy-first</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="cols"><i></i><i></i><i></i></div><div class="ln w" style="width:60%"></div><div class="ln" style="width:85%"></div><div class="ln" style="width:45%"></div></div></div>
+      <div class="body"><h3>Mtaa Yangu: house-hunting platform</h3>
+      <p>A property platform for a client, with a public website for house hunters and a separate portal for landlords, agents and caretakers.</p>
+      <div class="row"><b>Problem:</b> finding a house means long searches and unreliable listings, and landlords struggle to manage units and tenants.</div>
+      <div class="row"><b>Solution:</b> no-login browsing with photo listings, viewing bookings with M-Pesa confirmation, and a portal for properties, units, tenants, notices, move-outs and rent records.</div>
+      <div class="tags"><span>Flask</span><span>SQLite</span><span>Web app</span><span>M-Pesa</span></div></div></div>
+
+    <div class="card proj rv"><div class="mock"><div class="win"><div class="dots"><i></i><i></i><i></i></div><div class="bars"><i style="height:30%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:55%"></i><i style="height:75%"></i></div></div></div>
+      <div class="body"><h3>DJ2san: sound effects &amp; voice drops</h3>
+      <p>A Windows desktop app built for a DJ to generate sound effects and voice drops and use them while mixing.</p>
+      <div class="row"><b>Solution:</b> 29 synthesised effects, shout-outs in English, Swahili and Sheng, a one-click name pack, and recording through the same effects.</div>
+      <div class="tags"><span>Python</span><span>Desktop app</span><span>Audio</span></div></div></div>
 
   </div>
 </div></section>
@@ -340,13 +412,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     <div class="photo sq" data-photo role="img" aria-label="Photo of Tom Ochola">TO</div>
     <div class="mono muted rv">About</div>
     <h2 class="rv">An accountant who builds.</h2>
-    <p class="muted rv" style="margin-bottom:14px">I'm Tom Ochola, based in Kenya. My degree combined accounting with IT, and I went on to teach myself to build the tools I kept wishing existed: systems, apps and websites.</p>
-    <p class="muted rv">That mix means I don't just make something that looks good. I make something whose numbers are right, that fits how Kenyan businesses really get paid, and that you can run without me.</p>
-    <div class="edu rv"><b>BSc Accounting &amp; Finance with IT</b><span class="muted">Bachelor's degree</span></div>
+    <p class="muted rv" style="margin-bottom:14px">I'm Tom Ochola, based in Kenya. I studied accounting and IT at Maseno University, and I've worked as a high school teacher of Mathematics and Business Studies. Along the way I taught myself to build the tools I kept wishing existed: systems, apps and websites.</p>
+    <p class="muted rv" style="margin-bottom:14px">That mix means I don't just make something that looks good. I make something whose numbers are right, that fits how Kenyan businesses really get paid, and that you can run without me.</p>
+    <p class="muted rv">Teaching taught me to explain things simply and patiently. So when I build your system, I also train you and your staff to use it with confidence.</p>
+    <div class="edu rv"><b>BSc Accounting &amp; Finance with IT</b><span class="muted">Maseno University · Second Class Honours · Graduated 2025</span></div>
+    <div class="edu rv"><b>Programming training</b><span class="muted">Certificate · 2022</span></div>
+    <div class="edu rv"><b>High school teacher</b><span class="muted">Mathematics &amp; Business Studies · Academic writing</span></div>
+    <div class="nums rv">
+      <div><b data-n="8">0</b><span>Projects built</span></div>
+      <div><b data-n="2">0</b><span>M-Pesa-ready systems</span></div>
+      <div><b data-n="2">0</b><span>Languages (EN / SW)</span></div>
+    </div>
   </div>
   <div class="skills rv">
+    <h3 style="margin-bottom:18px;font-size:1.2rem">Strengths</h3>
+    <div class="meter rv"><div class="mt"><span>Accounting &amp; bookkeeping</span><em>90%</em></div><div class="mb"><i style="--w:.9"></i></div></div>
+    <div class="meter rv"><div class="mt"><span>Excel &amp; Google Sheets systems</span><em>90%</em></div><div class="mb"><i style="--w:.9"></i></div></div>
+    <div class="meter rv"><div class="mt"><span>M-Pesa &amp; business workflows</span><em>80%</em></div><div class="mb"><i style="--w:.8"></i></div></div>
+    <div class="meter rv"><div class="mt"><span>Web development</span><em>75%</em></div><div class="mb"><i style="--w:.75"></i></div></div>
+    <div class="meter rv" style="margin-bottom:28px"><div class="mt"><span>Teaching &amp; training</span><em>90%</em></div><div class="mb"><i style="--w:.9"></i></div></div>
     <h3 style="margin-bottom:16px;font-size:1.2rem">Tools &amp; skills</h3>
-    <span>Financial accounting</span><span>Bookkeeping</span><span>Management accounts</span><span>Excel &amp; VBA</span><span>Google Sheets &amp; Apps Script</span><span>Web development</span><span>Python</span><span>M-Pesa workflows</span><span>KRA tax basics</span><span>Video editing</span>
+    <span>Financial accounting</span><span>Bookkeeping</span><span>Management accounts</span><span>Excel &amp; VBA</span><span>Google Sheets &amp; Apps Script</span><span>Web development</span><span>Python</span><span>M-Pesa workflows</span><span>KRA tax basics</span><span>Teaching &amp; training</span><span>Mathematics</span><span>Business Studies</span><span>Academic writing</span><span>Video editing</span>
   </div>
 </div></section>
 
@@ -375,10 +461,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
     </div>
     <form class="rv" id="qf">
       <label>Your name<input name="n" required autocomplete="name"></label>
+      <label>Phone or email<input name="c" required autocomplete="email"></label>
       <label>What do you need?
         <select name="s"><option>Accounting system</option><option>Business website</option><option>Starter website</option><option>Monthly bookkeeping</option><option>Something else</option></select></label>
       <label>Tell me a little about your business<textarea name="m" required></textarea></label>
-      <button class="btn" type="submit">Send via WhatsApp →</button>
+      <div class="ok" id="ok">✅ Opening WhatsApp. Press Send there to deliver your message.</div>
+      <button class="btn" type="submit">Send message →</button>
     </form>
   </div>
 </div></section>
@@ -420,6 +508,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <script>
 // ---- defaults (lock your final choice here) ----
 var DEFAULTS={theme:'gold',font:'syne'};
+// Paste your Formspree form ID here (the part after formspree.io/f/). Leave empty to use WhatsApp only.
+var FORMSPREE='';
 var OWNER=(location.protocol==='file:')||/[?&]edit/.test(location.search);
 var root=document.documentElement;
 function store(k,v){try{if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}}
@@ -480,6 +570,60 @@ if(OWNER){
   document.getElementById('cz-rm').onclick=function(){store('pf.photo',null);document.getElementById('cz-dl').dataset.canDl='';location.reload()};
 }
 
+// scroll progress bar
+window.addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);document.getElementById('bar').style.width=(p*100)+'%'},{passive:true});
+// typing effect
+(function(){
+  var el=document.getElementById('ty');
+  var words=['an Accountant.','a Systems Builder.','a Web Developer.','a Teacher &amp; Trainer.'.replace('&amp;','&')],w=0,i=0,del=false;
+  (function tick(){
+    var t=words[w];
+    if(del){i--;if(i<=0){del=false;w=(w+1)%words.length;t=words[w]}}
+    else{i++;if(i>=t.length){del=true;el.textContent=t;return setTimeout(tick,1700)}}
+    el.textContent=words[w].slice(0,Math.max(i,0));
+    setTimeout(tick,del?35:70);
+  })();
+  setTimeout(function(){},0);
+})();
+// demo buttons on the project cards (same order as the cards on the page)
+// When a project goes online, paste its link between the quotes and the button becomes "Live demo".
+var DEMOS=[
+  {name:'Tabby T',url:''},
+  {name:'Biashara',url:''},
+  {name:'the Café ordering system',url:''},
+  {name:'My Account ledger',url:''},
+  {name:'the Business books',url:''},
+  {name:'PDF Signer',url:''},
+  {name:'Mtaa Yangu',url:''},
+  {name:'DJ2san',url:''}
+];
+document.querySelectorAll('.proj .body').forEach(function(b,i){
+  var d=DEMOS[i];if(!d)return;
+  var a=document.createElement('a');a.className='btn demo';a.target='_blank';a.rel='noopener';
+  if(d.url){a.href=d.url;a.textContent='Live demo ↗'}
+  else{a.href='https://wa.me/254726630656?text='+encodeURIComponent('Hi Tom, I would like to see a demo of '+d.name+'.');a.textContent='Request a demo →'}
+  b.appendChild(a);
+});
+// animated counters
+document.querySelectorAll('[data-n]').forEach(function(el){
+  var n=+el.dataset.n,done=false;
+  new IntersectionObserver(function(es,o){
+    if(es[0].isIntersecting&&!done){done=true;var s=null;
+      (function f(t){s=s||t;var p=Math.min((t-s)/1200,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(performance.now());
+      o.disconnect()}
+  }).observe(el);
+});
+// highlight the nav link of the section in view
+(function(){
+  var links={};document.querySelectorAll('#menu a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY+120,cur=null;
+    Object.keys(links).forEach(function(id){var s=document.getElementById(id);if(s&&s.offsetTop<=y)cur=id});
+    Object.keys(links).forEach(function(id){links[id].classList.toggle('active',id===cur)});
+  },{passive:true});
+})();
+// card spotlight follows the mouse
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
 // scroll reveal
 (function(){
   var els=document.querySelectorAll('.rv');
@@ -491,8 +635,13 @@ document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('cli
 document.getElementById('qf').addEventListener('submit',function(ev){
   ev.preventDefault();
   var f=ev.target;
-  var t='Hi Tom, my name is '+f.n.value+'. I need: '+f.s.value+'.\n\n'+f.m.value;
-  window.open('https://wa.me/254726630656?text='+encodeURIComponent(t),'_blank');
+  var t='Hi Tom, my name is '+f.n.value+' ('+f.c.value+'). I need: '+f.s.value+'.\n\n'+f.m.value;
+  var ok=document.getElementById('ok');
+  function done(msg){ok.textContent=msg;ok.style.display='block';f.reset();setTimeout(function(){ok.style.display='none'},7000)}
+  function wa(){window.open('https://wa.me/254726630656?text='+encodeURIComponent(t),'_blank');done('✅ Opening WhatsApp. Press Send there to deliver your message.')}
+  if(!FORMSPREE){wa();return}
+  fetch('https://formspree.io/f/'+FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:f.n.value,contact:f.c.value,service:f.s.value,message:f.m.value,_subject:'Portfolio enquiry: '+f.s.value})})
+    .then(function(r){if(r.ok)done('✅ Message sent! I will reply shortly.');else wa()}).catch(wa);
 });
 </script>
 </body>
