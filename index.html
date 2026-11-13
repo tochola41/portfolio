@@ -242,7 +242,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;op
 .track span::after{content:"✦";color:var(--acc);margin-left:52px}
 .marquee:hover .track{animation-play-state:paused}
 .card{position:relative}
-.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--acc) 16%,transparent),transparent 70%)}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--acc) 28%,transparent),transparent 70%)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(460px circle at var(--hx,70%) var(--hy,35%),color-mix(in srgb,var(--acc) 15%,transparent),transparent 70%)}
 .card:hover::after{opacity:1}
 .bars i{transform-origin:bottom;transform:scaleY(.15);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
 .rv.in .bars i{transform:scaleY(1)}
@@ -642,6 +643,16 @@ document.getElementById('qf').addEventListener('submit',function(ev){
   if(!FORMSPREE){wa();return}
   fetch('https://formspree.io/f/'+FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:f.n.value,contact:f.c.value,service:f.s.value,message:f.m.value,_subject:'Portfolio enquiry: '+f.s.value})})
     .then(function(r){if(r.ok)done('✅ Message sent! I will reply shortly.');else wa()}).catch(wa);
+});
+</script>
+<script>
+// cursor glow on cards and hero (separate from the main script so nothing else can stop it)
+document.addEventListener('mousemove',function(e){
+  var t=e.target;if(!t||!t.closest)return;
+  var c=t.closest('.card');
+  if(c){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}
+  var h=t.closest('.hero');
+  if(h){var q=h.getBoundingClientRect();h.style.setProperty('--hx',(e.clientX-q.left)+'px');h.style.setProperty('--hy',(e.clientY-q.top)+'px')}
 });
 </script>
 </body>
