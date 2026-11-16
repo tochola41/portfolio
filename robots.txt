@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tochola.co.ke/sitemap.xml
