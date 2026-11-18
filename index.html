@@ -469,6 +469,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;op
       <label>What do you need?
         <select name="s"><option>Accounting system</option><option>Business website</option><option>Starter website</option><option>Monthly bookkeeping</option><option>Something else</option></select></label>
       <label>Tell me a little about your business<textarea name="m" required></textarea></label>
+      <input name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+      <p style="font-size:.78rem;opacity:.7;margin:2px 0 10px">By sending, you agree I may use your details only to reply to you. <a href="privacy.html" style="text-decoration:underline">Privacy notice</a></p>
       <div class="ok" id="ok">✅ Opening WhatsApp. Press Send there to deliver your message.</div>
       <button class="btn" type="submit">Send message →</button>
     </form>
@@ -477,7 +479,15 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;op
 
 </main>
 
-<footer><div class="wrap"><span>© <script>document.write(new Date().getFullYear())</script> Tom Ochola · Accounting systems &amp; websites · Kenya</span><a href="#top" style="color:#fff">Back to top ↑</a></div></footer>
+<footer><div class="wrap"><span>© <script>document.write(new Date().getFullYear())</script> Tom Ochola · Accounting systems &amp; websites · Kenya</span><span><a href="privacy.html" style="color:#fff;margin-right:16px">Privacy</a><a href="#top" style="color:#fff">Back to top ↑</a></span></div></footer>
+<a href="https://wa.me/254726630656?text=Hi%20Tom%2C%20I%20saw%20your%20website%20and%20I%20need%20help%20with%20" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#04130c;font:700 .9rem 'Segoe UI',sans-serif;text-decoration:none;padding:13px 20px;border-radius:99px;box-shadow:0 6px 24px rgba(0,0,0,.35)">💬 Chat on WhatsApp</a>
+<script>
+/* Paste your profile links between the quotes. Empty ones stay hidden. */
+var SOCIALS={LinkedIn:'',Instagram:'',Facebook:'',TikTok:'',YouTube:''};
+(function(){var w=document.querySelector('footer .wrap');if(!w)return;var h='';
+for(var k in SOCIALS){if(SOCIALS[k])h+='<a href="'+SOCIALS[k]+'" target="_blank" rel="noopener me" style="color:#fff;margin-right:14px">'+k+'</a>'}
+if(h){var d=document.createElement('div');d.style.cssText='width:100%;margin-top:10px;font-size:.9rem';d.innerHTML='Follow: '+h;w.appendChild(d)}})();
+</script>
 
 <a class="wa" href="https://wa.me/254726630656?text=Hi%20Tom%2C%20I%27d%20like%20to%20talk%20about%20a%20project." target="_blank" rel="noopener">WhatsApp</a>
 
@@ -644,7 +654,7 @@ document.getElementById('qf').addEventListener('submit',function(ev){
   function done(msg){ok.textContent=msg;ok.style.display='block';f.reset();setTimeout(function(){ok.style.display='none'},7000)}
   function wa(){window.open('https://wa.me/254726630656?text='+encodeURIComponent(t),'_blank');done('✅ Opening WhatsApp. Press Send there to deliver your message.')}
   if(!FORMSPREE){wa();return}
-  fetch('https://formspree.io/f/'+FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:f.n.value,contact:f.c.value,service:f.s.value,message:f.m.value,_subject:'Portfolio enquiry: '+f.s.value})})
+  fetch('https://formspree.io/f/'+FORMSPREE,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name:f.n.value,contact:f.c.value,service:f.s.value,message:f.m.value,_gotcha:f._gotcha.value,_subject:'Portfolio enquiry: '+f.s.value})})
     .then(function(r){if(r.ok)done('✅ Message sent! I will reply shortly.');else wa()}).catch(wa);
 });
 </script>
